@@ -31,6 +31,7 @@ public class QuizActivity extends Activity {
 	private int mCurrentIndex = 0;
 	
 	private void updateQuestion() {
+		Log.d(TAG, "Updating question text for question #" + mCurrentIndex, new Exception());
 		int question = mQuestionBank[mCurrentIndex].getQuestion();
 		mQuestionTextView.setText(question);
 	}
@@ -98,7 +99,7 @@ public class QuizActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+				//mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
 				updateQuestion();
 				
 			}
